@@ -1,5 +1,9 @@
 import Link from 'next/link'
-import Navigation from './nav.js'
+
+export const metadata = {
+  title: 'Home',
+  description: 'this is a test from home page',
+}
 
 export default function HomePage() {
   return (

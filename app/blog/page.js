@@ -49,7 +49,7 @@ export default async function Blog() {
                 </div>
                 <div className="group relative">
                   <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-                    <Link href={`/blog/${post.slug}`}>
+                    <Link href={`/blog/${post.slug}`} prefetch={true}>
                       <span className="absolute inset-0" />
                       {post.title.rendered}
                     </Link>
@@ -62,7 +62,7 @@ export default async function Blog() {
                 <div className="relative mt-8 flex items-center gap-x-4">
                   <div className="text-sm/6">
                     <p className="font-semibold text-gray-900">
-                      <Link href={`/blog/${post.slug}`}>
+                      <Link href={`/blog/${post.slug}`} prefetch={true}>
                         <span className="absolute inset-0" />
                         {/* Placeholder for author */}
                         Zashevi Trans

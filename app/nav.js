@@ -171,11 +171,11 @@ export default function Example() {
         </div>
       </Dialog>
 
-      <header className="relative bg-white">
-        <p className="flex h-10 items-center text-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8 p-6">
+      <header className="relative bg-[#ffffff]">
+        {/* <p className="flex h-10 items-center text-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8 p-6">
           Извозване с контейнери, товаро-разтоварни услуги и други от Зашеви
           Транс ООД
-        </p>
+        </p> */}
 
         <nav
           aria-label="Top"

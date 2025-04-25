@@ -19,27 +19,45 @@ const cards = [
   },
 ];
 
-export default function Example() {
+export default function Example({ blurred = false }) {
   return (
-    <div className="relative isolate overflow-hidden bg-[#2E2E2E] py-24 sm:py-32">
-      <div className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl">
-        <div
-          style={{
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
-          className="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#f7c51e] to-[#2E2E2E] opacity-90"
-        />
+    <div className="relative isolate overflow-hidden bg-[#2E2E2E] py-24 sm:py-32 w-full">
+      {/* Линиите сега покриват 100% от екрана, без падинги и марджини */}
+      <div className="absolute inset-0 -z-10 w-screen h-full flex items-center justify-center">
+        <svg
+          className="absolute w-full h-full opacity-40"
+          viewBox="0 0 2000 800"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient id="lineGradient" x1="0" y1="0" x2="100%" y2="0">
+              <stop offset="0%" stopColor="#f7c51e" stopOpacity="0.7" />
+              <stop offset="100%" stopColor="#f7c51e" stopOpacity="0.2" />
+            </linearGradient>
+            {blurred && (
+              <filter id="blurEffect">
+                <feGaussianBlur stdDeviation="6" />
+              </filter>
+            )}
+          </defs>
+          {Array.from({ length: 20 }).map((_, i) => (
+            <line
+              key={i}
+              x1={Math.random() * 2000}
+              y1={Math.random() * 800}
+              x2={Math.random() * 2000}
+              y2={Math.random() * 800}
+              stroke="url(#lineGradient)"
+              strokeWidth="4"
+              opacity={Math.random() * 0.6 + 0.4}
+              transform={`rotate(${Math.random() * 40 - 20}, 1000, 400)`}
+              filter={blurred ? "url(#blurEffect)" : "none"}
+            />
+          ))}
+        </svg>
       </div>
-      <div className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu">
-        <div
-          style={{
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
-          className="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#f7c51e] to-[#2E2E2E] opacity-90"
-        />
-      </div>
+
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-8xl lg:mx-0 text-center">
           <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-9/10">

@@ -56,6 +56,36 @@ export default function Example() {
           </div>
         </div>
       </div>
+
+      <div className="absolute right-0 top-0 bottom-0 z-10 w-1/3 h-full flex items-center justify-center pointer-events-none">
+        <svg
+          className="absolute w-full h-full opacity-50"
+          viewBox="0 0 500 800"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M80 0 C160 150, 340 250, 420 400 S480 600, 350 800"
+            stroke="#f7c51e"
+            strokeWidth="1.5"
+            fill="none"
+          />
+          <path
+            d="M140 0 C180 170, 320 270, 440 420 S500 650, 320 800"
+            stroke="#f7c51e"
+            strokeWidth="1.2"
+            opacity="0.8"
+            fill="none"
+          />
+          <path
+            d="M200 0 C200 190, 300 290, 460 440 S520 700, 290 800"
+            stroke="#f7c51e"
+            strokeWidth="1"
+            opacity="0.8"
+            fill="none"
+          />
+        </svg>
+      </div>
     </div>
   );
 }

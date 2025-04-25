@@ -23,42 +23,38 @@ const services = [
 
 export default function Example() {
   return (
-    <div className="px-4 sm:px-6 lg:px-8 max-w-[80%] mx-auto">
-      <div className="mt-8 flow-root">
-        <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-            <table className="min-w-full divide-y divide-gray-300">
-              <thead>
-                <tr>
-                  <th
-                    scope="col"
-                    className="py-3.5 pr-3 pl-4 text-left text-sm font-semibold text-gray-900 sm:pl-3"
-                  >
-                    Услуги
-                  </th>
-                  <th
-                    scope="col"
-                    className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                  >
-                    Цени без ДДС
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="bg-white">
-                {services.map((person) => (
-                  <tr key={person.email} className="even:bg-gray-50">
-                    <td className="py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-3">
-                      {person.name}
-                    </td>
-                    <td className="px-3 py-4 text-sm whitespace-nowrap text-gray-500">
-                      {person.role}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
+    <div className="w-[80%] mx-auto">
+      <div className="mt-8 mb-8 overflow-x-auto">
+        <table className="w-full border-collapse border border-gray-300">
+          <thead>
+            <tr className="bg-gray-100">
+              <th
+                scope="col"
+                className="py-3.5 px-4 text-left text-sm font-semibold text-gray-900 border border-gray-300"
+              >
+                Услуги
+              </th>
+              <th
+                scope="col"
+                className="py-3.5 px-4 text-left text-sm font-semibold text-gray-900 border border-gray-300"
+              >
+                Цени без ДДС
+              </th>
+            </tr>
+          </thead>
+          <tbody className="bg-white">
+            {services.map((service, index) => (
+              <tr key={index} className="even:bg-gray-50">
+                <td className="py-4 px-4 text-sm font-medium text-gray-900 border border-gray-300">
+                  {service.name}
+                </td>
+                <td className="py-4 px-4 text-sm text-gray-500 border border-gray-300">
+                  {service.role}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

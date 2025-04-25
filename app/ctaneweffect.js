@@ -22,24 +22,13 @@ const cards = [
 export default function Example() {
   return (
     <div className="relative isolate overflow-hidden bg-[#2E2E2E] py-24 sm:py-32">
-      <div className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl">
-        <div
-          style={{
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
-          className="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#f7c51e] to-[#2E2E2E] opacity-90"
-        />
+      {/* Нов динамичен ефект - радиален градиент със светлинни акценти */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute left-1/3 top-0 h-[400px] w-[400px] bg-[radial-gradient(circle,_rgba(255,255,255,0.15)_0%,_rgba(0,0,0,0)_70%)] blur-3xl opacity-60"></div>
+        <div className="absolute right-10 top-10 h-[300px] w-[300px] bg-[radial-gradient(circle,_rgba(247,197,30,0.3)_0%,_rgba(0,0,0,0)_80%)] blur-2xl opacity-70"></div>
+        <div className="absolute bottom-10 left-10 h-[350px] w-[350px] bg-[radial-gradient(circle,_rgba(255,255,255,0.2)_0%,_rgba(0,0,0,0)_80%)] blur-2xl opacity-50"></div>
       </div>
-      <div className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu">
-        <div
-          style={{
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
-          className="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#f7c51e] to-[#2E2E2E] opacity-90"
-        />
-      </div>
+
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-8xl lg:mx-0 text-center">
           <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-9/10">

@@ -2,19 +2,19 @@ import { CheckIcon } from "@heroicons/react/20/solid";
 
 const features = [
   {
-    name: "Invite team members",
+    name: "НИЕ СМЕ ОТДАДЕНИ НА РАБОТАТА",
     description:
-      "Rerum repellat labore necessitatibus reprehenderit molestiae praesentium.",
+      "Имаме стотици завършени проекти през повече от едно десетилетие работа. Горди сме, че успяваме да доставим на клиентите си отлична услуга и разумна цена. Щастливи сме, че клиентите ни ценят професионализма ни.",
   },
   {
-    name: "List view",
+    name: "НИЕ СМЕ НА ТОЧНОТО МЯСТО В ТОЧНОТО ВРЕМЕ",
     description:
-      "Corporis asperiores ea nulla temporibus asperiores non tempore assumenda aut.",
+      "Наша фирмена политика е да изпълняваме поръчките на клиентите в максимално кратък срок и да не ги ангажираме с детайлите по работата ни.",
   },
   {
-    name: "Keyboard shortcuts",
+    name: "НИЕ СМЕ НА РАЗПОЛОЖЕНИЕ",
     description:
-      "In sit qui aliquid deleniti et. Ad nobis sunt omnis. Quo sapiente dicta laboriosam.",
+      "Ние обичаме нашата работа и я вършим с желание и професионализъм. Екипът ни работи и в почивните дни, за да успеете навреме с Вашите ремонти и строежи.",
   },
   {
     name: "Calendars",
@@ -48,15 +48,15 @@ export default function Example() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
           <div className="col-span-2">
             <h2 className="text-base/7 font-semibold text-indigo-600">
-              Everything you need
+              Всичко от което имате нужда
             </h2>
             <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
-              All-in-one platform
+              Нашите основни дейности
             </p>
             <p className="mt-6 text-base/7 text-gray-600">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-              impedit perferendis suscipit eaque, iste dolor cupiditate
-              blanditiis ratione.
+              Главната дейност на фирмата ни е извозване на строителни отпадъци
+              с контейнери за боклук. Разполагаме с контейнери от 3, 4 и 7
+              кубика пригодени за всички видове отпадъци и строителни материали.
             </p>
           </div>
           <dl className="col-span-3 grid grid-cols-1 gap-x-8 gap-y-10 text-base/7 text-gray-600 sm:grid-cols-2 lg:gap-y-16">
@@ -65,7 +65,7 @@ export default function Example() {
                 <dt className="font-semibold text-gray-900">
                   <CheckIcon
                     aria-hidden="true"
-                    className="absolute top-1 left-0 size-5 text-indigo-500"
+                    className="absolute top-1 left-0 size-7 text-[#f7c51e]"
                   />
                   {feature.name}
                 </dt>
